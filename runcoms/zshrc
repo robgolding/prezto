@@ -118,3 +118,5 @@ alias tw='task work'
 
 alias taw='task add +work'
 alias tawp='task add +work project:policeuk'
+
+[[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
