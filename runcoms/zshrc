@@ -70,8 +70,6 @@ if [[ "$RPS1" == "" && "$RPROMPT" == "" ]]; then
 RPS1='$(vi_mode_prompt_info)'
 fi
 
-source ~/.zsh/zfunc/opp.zsh
-
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
