@@ -34,6 +34,7 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'python' \
   'gpg' \
+  'scm_breeze' \
   'opp'
 
 #
