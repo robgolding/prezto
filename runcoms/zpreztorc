@@ -35,6 +35,7 @@ zstyle ':prezto:load' pmodule \
   'python' \
   'gpg' \
   'scm_breeze' \
+  'docker' \
   'opp'
 
 #
