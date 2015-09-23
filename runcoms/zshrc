@@ -121,3 +121,5 @@ alias taw='task add +work'
 alias tawp='task add +work project:policeuk'
 
 [[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
