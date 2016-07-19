@@ -123,3 +123,6 @@ alias tawp='task add +work project:policeuk'
 [[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export NVM_DIR="/usr/local/opt/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
