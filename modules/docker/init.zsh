@@ -2,8 +2,11 @@
 # Provides handy aliases for docker and docker-compose
 #
 
-$(boot2docker shellinit 2>/dev/null)
+function dmi {
+    eval $(docker-machine env $1)
+}
 
-alias b2d='boot2docker'
-alias b2di='$(boot2docker shellinit)'
+alias dm='docker-machine'
+alias dms='docker-machine start default'
+
 alias dc='docker-compose'
