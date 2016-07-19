@@ -37,7 +37,8 @@ zstyle ':prezto:load' pmodule \
   'scm_breeze' \
   'aws' \
   'docker' \
-  'opp'
+  'opp' \
+  'zapier'
 
 #
 # Editor
