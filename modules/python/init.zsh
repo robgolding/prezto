@@ -39,8 +39,14 @@ if (( $+commands[virtualenvwrapper.sh] )); then
   # Disable the virtualenv prompt.
   VIRTUAL_ENV_DISABLE_PROMPT=1
 
+  VIRTUALENVWRAPPER_PYTHON=python2
+
   source "$commands[virtualenvwrapper.sh]"
 fi
+
+# Set pipenv environment variables
+
+export PIPENV_VENV_IN_PROJECT=true
 
 #
 # Aliases
