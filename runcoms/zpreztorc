@@ -33,12 +33,14 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'prompt' \
   'python' \
+  'ruby' \
   'gpg' \
   'scm_breeze' \
   'aws' \
   'docker' \
   'opp' \
-  'zapier'
+  'zapier' \
+  'fzf'
 
 #
 # Editor
