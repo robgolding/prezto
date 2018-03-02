@@ -15,7 +15,7 @@ fi
 # Customize to your needs...
 
 bindkey -v
-export EDITOR=vim
+export EDITOR='mvim -v'
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
@@ -120,6 +120,7 @@ alias tw='task work'
 alias taw='task add +work'
 alias tawp='task add +work project:policeuk'
 
+alias vim='mvim -v'
 [[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
