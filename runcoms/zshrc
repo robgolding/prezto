@@ -76,6 +76,7 @@ fi
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
+alias ls='ls -p'
 alias l='ls'
 alias ll='ls -l'
 
