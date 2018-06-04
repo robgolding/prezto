@@ -15,6 +15,11 @@ if [[ -s "$HOME/.pyenv/bin/pyenv" ]]; then
 elif (( $+commands[pyenv] )); then
   eval "$(pyenv init -)"
 
+  # load pyenv-virtulenv if it exists
+  if (( $+commands[pyenv-virtualenv-init] )); then
+    eval "$(pyenv-virtualenv-init -)"
+  fi
+
 # Prepend PEP 370 per user site packages directory, which defaults to
 # ~/Library/Python on Mac OS X and ~/.local elsewhere, to PATH.
 else
@@ -31,13 +36,14 @@ if (( ! $+commands[python] && ! $+commands[pyenv] )); then
   return 1
 fi
 
+# Disable the virtualenv prompt.
+VIRTUAL_ENV_DISABLE_PROMPT=1
+
 # Load virtualenvwrapper into the shell session.
 if (( $+commands[virtualenvwrapper.sh] )); then
   # Set the directory where virtual environments are stored.
   export WORKON_HOME="$HOME/.virtualenvs"
 
-  # Disable the virtualenv prompt.
-  VIRTUAL_ENV_DISABLE_PROMPT=1
 
   VIRTUALENVWRAPPER_PYTHON=python2
 
