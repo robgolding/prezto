@@ -41,7 +41,8 @@ zstyle ':prezto:load' pmodule \
   'docker' \
   'opp' \
   'zapier' \
-  'fzf'
+  'fzf' \
+  'fasd'
 
 #
 # Editor
