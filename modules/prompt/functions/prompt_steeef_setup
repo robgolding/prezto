@@ -90,9 +90,6 @@ function prompt_steeef_setup {
   zstyle ':vcs_info:*:prompt:*' formats "${branch_format}"
   zstyle ':vcs_info:*:prompt:*' nvcsformats   ""
 
-  # Set python-info parameters.
-  zstyle ':prezto:module:python:info:virtualenv' format '(%v)'
-
   # Define prompts.
   PROMPT="
 ${_prompt_steeef_colors[3]}%n%f@${_prompt_steeef_colors[2]}%m%f:${_prompt_steeef_colors[5]}"'$collapsed_pwd'"%f "'${vcs_info_msg_0_}'"

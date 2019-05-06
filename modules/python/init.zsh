@@ -36,8 +36,8 @@ if (( ! $+commands[python] && ! $+commands[pyenv] )); then
   return 1
 fi
 
-# Disable the virtualenv prompt.
-VIRTUAL_ENV_DISABLE_PROMPT=1
+# Poetry
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # Load virtualenvwrapper into the shell session.
 if (( $+commands[virtualenvwrapper.sh] )); then
@@ -59,4 +59,3 @@ export PIPENV_VENV_IN_PROJECT=true
 #
 
 alias py='python'
-

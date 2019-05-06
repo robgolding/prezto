@@ -34,6 +34,7 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'python' \
   'ruby' \
+  'node' \
   'gpg' \
   'scm_breeze' \
   'aws' \

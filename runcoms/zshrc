@@ -15,7 +15,7 @@ fi
 # Customize to your needs...
 
 bindkey -v
-export EDITOR='mvim -v'
+export EDITOR=vim
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
@@ -26,8 +26,6 @@ bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
-
-
 
 
 # Ensures that $terminfo values are valid and updates editor information when
@@ -90,52 +88,18 @@ alias json='python -m json.tool'
 
 alias git=hub
 
-# hg aliases
-
-alias h='hg'
-alias hs='hg status'
-alias ha='hg add'
-alias hc='hg commit'
-alias hb='hg branch'
-alias hbs='hg branches'
-alias hco='hg checkout -c'
-function hd {
-    hg diff $* | vim -R -
-}
-alias hm='hg merge'
-function hmint {
-    current=$(hg branch)
-    other=$1
-    hg merge $other && hg commit -m "Merge $other into $current"
-}
-alias hl='hg log | less'
-alias hps='hg push --new-branch || echo -e "\a"'
-alias hpl='hg pull -u'
-alias hsh='hg show'
-alias hr='hg resolve'
-alias hmc='hg merge && hg commit -m Merge'
-
-alias t=task
-alias tw='task work'
-
-alias taw='task add +work'
-alias tawp='task add +work project:policeuk'
-
-alias vim='mvim -v'
-
-aws-instances-describe () {
-        zparseopts -D -E -A opts -- o t:
-        output=${opts[-o]:-"table"}
-        tag_name=${opts[-t]:-"Name"}
-        name=${1}
-        query=("Reservations[].Instances[]" ".{" "Name             : Tags[?Key == \`Name\`].Value | [0]," "State            : State.Name," "LaunchTime       : LaunchTime," "PublicIpAddress  : PublicIpAddress," "PrivateIpAddress : PrivateIpAddress," "ImageId          : ImageId," "InstanceType     : InstanceType" "}")
-        aws --output ${output} ec2 describe-instances --filters "Name=tag:${tag_name},Values=*${name}*" --query "${query}"
-}
+alias vim=nvim
 
 [[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+eval "$(direnv hook zsh)"
+
 export NVM_DIR="/usr/local/opt/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(direnv hook zsh)"
+
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="${HOME}/.local/bin:${PATH}"
