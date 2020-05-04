@@ -92,6 +92,8 @@ alias gpl="git pull"
 
 alias vim=nvim
 
+alias k=kubectl
+
 [[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -105,5 +107,6 @@ eval "$(direnv hook zsh)"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="${HOME}/.local/bin:${PATH}"
+source "/Users/robgolding/src/zapier/shell-tools/scripts.sh"
 
 eval "$(scmpuff init -s)"
