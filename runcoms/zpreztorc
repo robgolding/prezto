@@ -36,7 +36,6 @@ zstyle ':prezto:load' pmodule \
   'ruby' \
   'node' \
   'gpg' \
-  'scm_breeze' \
   'aws' \
   'drone' \
   'docker' \

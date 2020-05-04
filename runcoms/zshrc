@@ -87,6 +87,8 @@ alias grep='grep --color=always'
 alias json='python -m json.tool'
 
 alias git=hub
+alias gc="git commit"
+alias gpl="git pull"
 
 alias vim=nvim
 
@@ -103,3 +105,5 @@ eval "$(direnv hook zsh)"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="${HOME}/.local/bin:${PATH}"
+
+eval "$(scmpuff init -s)"
